@@ -1,6 +1,8 @@
-# cookies-dialog
+# cookie-dialog
 
-An Android library that displays to the user a dialog with the "cookies" message which is required by the EU laws.
+An Android library that displays to the user a dialog with the "cookie" message which is required by the EU laws.
+
+![Image](https://raw.githubusercontent.com/lowlevel-studios/cookie-dialog/master/art/screenshot.png)
 
 # Include in your project
 
