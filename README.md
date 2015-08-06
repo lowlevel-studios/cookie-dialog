@@ -17,6 +17,7 @@ compile 'st.lowlevel:cookie-dialog:1.0.0@aar'
 ## How to use
 
 This is a quick example of using this library in an application.
+
 ```java
 public class MainActivity extends Activity {
   private CookieManager mCookieManager = new CookieManager(this);
@@ -24,7 +25,7 @@ public class MainActivity extends Activity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     // your code here
-    mCookieManager.showOnce(false); // Or pass "true" to show the dialog only to EU users
+    mCookieManager.showOnce(false, CookieManager.Type.DIALOG); // Or pass "true" to show the dialog only to EU users
   }
   
   @Override
@@ -36,6 +37,8 @@ public class MainActivity extends Activity {
 ```
 
 This will show the dialog only **once**. The next time the user opens the app the dialog will not be displayed.
+
+If instead of a dialog you prefer to display an overlay, just change `CookieManager.Type.DIALOG` to `CookieManager.Type.OVERLAY`.
 
 # Developed by
 
