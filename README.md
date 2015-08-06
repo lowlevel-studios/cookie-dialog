@@ -40,6 +40,16 @@ This will show the dialog only **once**. The next time the user opens the app th
 
 If instead of a dialog you prefer to display an overlay, just change `CookieManager.Type.DIALOG` to `CookieManager.Type.OVERLAY`.
 
+## Permissions
+
+No permissions are required if the device has a SIM card or there is no need to detect if an user is located in an EU country. Otherwise, at least one of this permissions are needed:
+
+```
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-permission android:name="android.permission.INTERNET" />
+```
+
 # Developed by
 
 Miguel Botón (Lowlevel Studios) - mboton@lowlevel-studios.com
