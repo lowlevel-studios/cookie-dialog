@@ -6,6 +6,14 @@ An Android library that displays to the user a dialog with the "cookie" message 
 
 # Include in your project
 
+## Maven
+
+This library is available in Maven Central, so you just need to add the following dependency to your project's `build.gradle`
+
+```
+compile 'st.lowlevel:cookie-dialog:1.0.0@aar'
+```
+
 ## How to use
 
 This is a quick example of using this library in an application.
