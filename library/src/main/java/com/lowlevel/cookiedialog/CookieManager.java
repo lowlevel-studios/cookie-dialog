@@ -70,17 +70,6 @@ public class CookieManager implements DialogInterface.OnClickListener {
         builder.show();
     }
 
-    private void startTask() {
-        /* Create task */
-        mTask = new LocationTask();
-
-        /* Start task */
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
-            mTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-        else
-            mTask.execute();
-    }
-
 
     /*
      * Public methods
