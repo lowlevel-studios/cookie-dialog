@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="cd_overlay_background">#a0ffeb3b</color>
+    <color name="cd_overlay_button_color">#333</color>
+    <color name="cd_overlay_text_color">#333</color>
+    <color name="cd_overlay_separator">#ddd</color>
+
+</resources>

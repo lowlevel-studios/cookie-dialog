@@ -20,17 +20,25 @@ public class MainActivity extends Activity {
 		/* Set content view */
 		setContentView(R.layout.activity_main);
 
-		/* Set listener */
-		findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
+		/* Set listeners */
+		findViewById(R.id.buttonDialog).setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				/* Show cookie dialog (all users) */
-				mCookieManager.show(false);
+				mCookieManager.show(false, CookieManager.Type.DIALOG);
+			}
+		});
+
+		findViewById(R.id.buttonOverlay).setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				/* Show cookie overlay (all users) */
+				mCookieManager.show(false, CookieManager.Type.OVERLAY);
 			}
 		});
 
 		/* Show cookie dialog (only for EU users) */
-		mCookieManager.showOnce(true);
+		mCookieManager.showOnce(true, CookieManager.Type.DIALOG);
 	}
 
 	@Override

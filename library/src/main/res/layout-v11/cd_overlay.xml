@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="false"
+    android:focusable="false">
+
+    <LinearLayout
+        android:id="@+id/cd_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/cd_overlay_background"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:padding="@dimen/cd_overlay_text_padding"
+            android:text="@string/cd_message"
+            android:textColor="@color/cd_overlay_text_color" />
+
+        <Button
+            android:id="@+id/cd_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="@string/cd_ok"
+            android:textColor="@color/cd_overlay_button_color"
+            style="?android:buttonBarButtonStyle" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/cd_overlay"
+        android:background="@color/cd_overlay_separator" />
+
+    </RelativeLayout>

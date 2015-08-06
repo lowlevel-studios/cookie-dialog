@@ -3,5 +3,6 @@
     
     <string name="app_name">CookieDialog Sample</string>
     <string name="show_dialog">Show Dialog</string>
+    <string name="show_overlay">Show Overlay</string>
     
 </resources>
