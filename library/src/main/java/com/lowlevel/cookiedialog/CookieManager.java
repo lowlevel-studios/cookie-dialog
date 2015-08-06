@@ -34,6 +34,8 @@ public class CookieManager implements DialogInterface.OnClickListener {
      */
     @Override
     public void onClick(DialogInterface dialog, int which) {
+        /* Set preference */
+        setPreference(true);
     }
 
 
@@ -66,9 +68,6 @@ public class CookieManager implements DialogInterface.OnClickListener {
 
         /* Show dialog */
         builder.show();
-
-        /* Update preference */
-        setPreference(true);
     }
 
     private void startTask() {
