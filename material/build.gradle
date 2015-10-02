@@ -15,7 +15,7 @@ android {
 }
 
 dependencies {
-    compile project(':library')
+    provided project(':library')
     compile('com.afollestad.material-dialogs:core:0.8.1.0@aar') {
         transitive = true
     }
