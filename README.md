@@ -19,7 +19,7 @@ An Android library that displays to the user a dialog with the "cookie" message 
 This library is available in Maven Central, so you just need to add the following dependency to your project's `build.gradle`
 
 ```
-compile 'st.lowlevel:cookie-dialog:1.0.1@aar'
+compile 'st.lowlevel:cookie-dialog:1.0.3@aar'
 ```
 
 ## How to use
@@ -56,6 +56,24 @@ No permissions are required if the device has a SIM card or there is no need to 
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 <uses-permission android:name="android.permission.INTERNET" />
+```
+
+## Material design
+
+A dialog with Material design can be achieved with two small changes.
+
+Just add the following Maven dependency:
+
+```
+compile('st.lowlevel:cookie-dialog-material:1.0.3@aar') {
+  transitive = true
+}
+```
+
+And the following line of code:
+
+```
+mCookieManager.setDialog(new MaterialCookieDialog(context));
 ```
 
 # Developed by
