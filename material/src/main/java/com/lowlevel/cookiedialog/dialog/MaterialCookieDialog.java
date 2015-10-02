@@ -1,4 +1,4 @@
-package com.lowlevel.cookiedialog;
+package com.lowlevel.cookiedialog.dialog;
 
 import android.app.Dialog;
 import android.content.Context;
