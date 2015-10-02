@@ -2,7 +2,6 @@ package com.lowlevel.cookiedialog;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.preference.PreferenceManager;
@@ -12,7 +11,7 @@ import com.lowlevel.cookiedialog.dialog.ICookieDialog;
 import com.lowlevel.cookiedialog.location.LocationUtils;
 import com.lowlevel.cookiedialog.utils.AsyncTask;
 
-public class CookieManager implements DialogInterface.OnClickListener {
+public class CookieManager {
     /*
      * Private constants
      */
@@ -38,16 +37,6 @@ public class CookieManager implements DialogInterface.OnClickListener {
         /* Set attributes */
         mActivity = activity;
         mDialog   = new DefaultCookieDialog(activity);
-    }
-
-
-    /*
-     * Listener methods
-     */
-    @Override
-    public void onClick(DialogInterface dialog, int which) {
-        /* Set preference */
-        setPreference(true);
     }
 
 
