@@ -1,13 +1,14 @@
 package com.lowlevel.cookiedialog;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.preference.PreferenceManager;
 
+import com.lowlevel.cookiedialog.dialog.DefaultCookieDialog;
+import com.lowlevel.cookiedialog.dialog.ICookieDialog;
 import com.lowlevel.cookiedialog.location.LocationUtils;
 import com.lowlevel.cookiedialog.utils.AsyncTask;
 
@@ -28,13 +29,15 @@ public class CookieManager implements DialogInterface.OnClickListener {
     /*
      * Private variables
      */
-    private Activity     mActivity;
-    private LocationTask mTask;
+    private Activity      mActivity;
+    private ICookieDialog mDialog;
+    private LocationTask  mTask;
 
 
     public CookieManager(Activity activity) {
-        /* Set activity */
+        /* Set attributes */
         mActivity = activity;
+        mDialog   = new DefaultCookieDialog(activity);
     }
 
 
@@ -65,15 +68,9 @@ public class CookieManager implements DialogInterface.OnClickListener {
     }
 
     private void showDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(mActivity);
-
-        /* Setup dialog */
-        builder.setCancelable    (false);
-        builder.setMessage       (R.string.cd_message);
-        builder.setPositiveButton(R.string.cd_ok, this);
-
         /* Show dialog */
-        builder.show();
+        if (mDialog != null)
+            mDialog.show();
     }
 
     private void showOverlay() {
@@ -89,6 +86,11 @@ public class CookieManager implements DialogInterface.OnClickListener {
         /* Cancel task */
         if (mTask != null)
             mTask.cancel(true);
+    }
+
+    public void setDialog(ICookieDialog dialog) {
+        /* Set dialog */
+        mDialog = dialog;
     }
 
     public void setPreference(boolean shown) {
