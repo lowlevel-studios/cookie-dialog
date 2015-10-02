@@ -1,4 +1,4 @@
-# cookie-dialog
+# cookie-dialog [![Maven Central](https://maven-badges.herokuapp.com/maven-central/st.lowlevel/cookie-dialog/badge.svg?style=flat)](https://maven-badges.herokuapp.com/maven-central/st.lowlevel/cookie-dialog)
 
 An Android library that displays to the user a dialog with the "cookie" message which is required by the EU laws.
 
