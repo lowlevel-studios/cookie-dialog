@@ -2,7 +2,15 @@
 
 An Android library that displays to the user a dialog with the "cookie" message which is required by the EU laws.
 
+## Screenshots
+
+**Dialog:**
+
 ![Image](https://raw.githubusercontent.com/lowlevel-studios/cookie-dialog/master/art/screenshot.png)
+
+**Overlay:**
+
+![Image](https://raw.githubusercontent.com/lowlevel-studios/cookie-dialog/master/art/screenshot-overlay.png)
 
 # Include in your project
 
